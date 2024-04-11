@@ -1,0 +1,28 @@
+//SPDX-License-Identifier: MIT
+
+pragma solidity <0.6.0;
+
+contract voting{
+   struct Candidate{
+      uint id;
+      string name;
+      uint voteCount;
+   }
+   
+   mapping (uint => candidate) public candidates;
+   mapping(address> bool) public voters;
+
+   uint public candidatescount;
+
+   constructor() public  {  infinite gas 484800 gas
+       addCandidate("Yashu");
+       addCandidate("Nani")
+
+   function vote(uint_candidateId) private {  infinite gas
+        require (Ivoters[msg.sender]);
+        require(_candidateId >0 && _candidateId <= candidatescount);
+
+        voters[msg.sender] - true;
+        candidates[_candidateId].votecount++;
+    }
+}
